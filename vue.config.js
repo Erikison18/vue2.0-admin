@@ -1,8 +1,10 @@
 const { defineConfig } = require('@vue/cli-service')
 const TerserPlugin = require('terser-webpack-plugin')
+const path = require('path')
 
 module.exports = defineConfig({
   transpileDependencies: true,
+  productionSourceMap: false,
   publicPath: "/dist",
   devServer: {
     compress: true,
@@ -37,6 +39,15 @@ module.exports = defineConfig({
       })]
     }
     Object.assign(config, {
+      resolve: {
+        alias: {
+          "@js": path.resolve(__dirname, 'src/assets/js/'),
+          "@style": path.resolve(__dirname, 'src/assets/style/'),
+          "@common": path.resolve(__dirname, 'src/components/common/'),
+          "@pages": path.resolve(__dirname, 'src/components/pages/'),
+          "@api": path.resolve(__dirname, 'src/request/api.js'),
+        },
+      },
       optimization
     })
   },

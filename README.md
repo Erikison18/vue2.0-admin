@@ -1,24 +1,18 @@
-# vue2.0-admin
-
-## Project setup
-```
+## 安装
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+## 开发环境启动
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+## 生产环境打包
 npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## 自定义配置
+@vue-cli5.04搭建vue2.6.14版本(https://cli.vuejs.org/config/).
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+element-ui(https://element.eleme.io/#/zh-CN).
+
+axios(http://www.axios-js.com/zh-cn/docs/).
+
+vue-router(https://v3.router.vuejs.org/zh/).
+

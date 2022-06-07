@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <DemoComponent msg="Welcome to Your Vue.js App"/>
+    <MenuComponent></MenuComponent>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import DemoComponent from './components/DemoComponent.vue'
-
+import MenuComponent from "@common/menu.vue"
 export default {
   name: 'App',
   components: {
-    DemoComponent
-  }
+    MenuComponent
+  },
+  data() {
+    return {
+    }
+  },
 }
 </script>
 

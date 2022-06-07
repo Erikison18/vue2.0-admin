@@ -49,13 +49,13 @@
         label="热度">
       </el-table-column>
     </el-table>
-    <p>网易云音乐热评:{{commentData.name}}</p>
+    <p>网易云音乐热评~~:{{commentData.name}}</p>
   </div>
 </template>
 
 <script>
 import axios from "axios"
-import { getRequest } from "../request/api"
+import { getRequest } from "@api"
 export default {
   name: 'DemoComponent',
   data: ()=> {
@@ -99,7 +99,7 @@ export default {
         }
       )
       this.loading2 = false;
-      getRequest(`/comment1`).then(
+      getRequest(`/comment`).then(
         (response)=> {
           this.commentData = response.data
         },
