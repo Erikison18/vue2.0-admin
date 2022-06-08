@@ -16,3 +16,7 @@ axios(http://www.axios-js.com/zh-cn/docs/).
 
 vue-router(https://v3.router.vuejs.org/zh/).
 
+vuex(https://v3.vuex.vuejs.org/zh/).
+
+vuex-persistedstate(https://www.npmjs.com/package/vuex-persistedstate).
+

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { getRequest } from "@api"
+import { mapState } from "vuex"
 export default {
   name: 'LoginComponent',
   data: ()=> {
@@ -28,20 +28,18 @@ export default {
       }
     }
   },
+  computed: {
+    ...mapState('login', ['loginFlag', 'userInfo']),
+  },
   methods: {
     async onSubmit() {
-      console.log('submit!', this.form)
-       this.loading = true;
-       await getRequest(`/bilibili/?uid=1`).then(
-         (response)=> {
-           console.log(response)
-           this.$router.push("/userLayout/demo")
-         },
-         (error)=> {
-           console.error(error.message)
-         }
-       )
-       this.loading = false;
+       this.loading = true
+       await this.$store.dispatch('login/loginCommit', this.form)
+       this.loading = false
+       console.log(this.loginFlag, this.userInfo)
+       if (this.loginFlag) {
+         this.$router.push("/userLayout/demo")
+       }
     }
   }
 }

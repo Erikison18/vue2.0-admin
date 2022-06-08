@@ -1,0 +1,59 @@
+<template>
+  <div class="list">
+    <h1>list组件--人员列表</h1>
+    <input type="text" placeholder="请输入名字" v-model="name">
+    <button @click="addPerson">添加</button>
+    <button @click="addPersonServer">随机添加</button>
+    <ul>
+      <li v-for="item in personList" :key="item.id">{{item.id}}---{{item.name}}</li>
+    </ul>
+    <br/>
+    <h6>第一个人名是：{{firstPersonName}}</h6>
+    <h6 :style="{color: 'red'}">上方组件求和是：{{sum}}</h6>
+  </div>
+</template>
+
+<script>
+import {mapState} from "vuex"
+export default {
+  name: 'ListComponent',
+  data: ()=> {
+    return {
+      name: "",
+    }
+  },
+  computed: {
+    ...mapState('count', ['sum']),
+    // ...mapState('person', ['personList']),
+    personList() {
+    //   return this.$store.state.personList
+      return this.$store.state.person.personList
+    },
+    firstPersonName() {
+      return this.$store.getters["person/firstPersonName"]
+    }
+  },
+  methods: {
+    addPerson() {
+      if (this.name) {
+        this.$store.commit("person/ADD_PERSON", {
+          id: (new Date()).valueOf(),
+          name: this.name,
+        })
+      }
+    },
+    addPersonServer() {
+        this.$store.dispatch('person/addPersonServer')
+    },
+  }
+}
+</script>
+
+<style scoped lang="less">
+.list{
+  input{
+    border: 2px solid #ccc;
+    margin: 10px 0;
+  }
+}
+</style>

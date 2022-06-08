@@ -1,5 +1,6 @@
 import VueRouter from "vue-router";
 import Login from "@pages/login/index.vue";
+import NotFound from "@pages/notFound/index.vue";
 import UserLayout from "@layout/userLayout/index.vue";
 import Demo from "@pages/demo/index.vue";
 import Home from "@pages/home/index.vue";
@@ -28,6 +29,7 @@ const router = new VueRouter({
       },
       { path: "about", component: About },
     ]},
+    { path: '*', component: NotFound },
   ],
 });
 
