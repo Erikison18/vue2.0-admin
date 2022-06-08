@@ -44,6 +44,7 @@ module.exports = defineConfig({
           "@js": path.resolve(__dirname, 'src/assets/js/'),
           "@style": path.resolve(__dirname, 'src/assets/style/'),
           "@common": path.resolve(__dirname, 'src/components/common/'),
+          "@layout": path.resolve(__dirname, 'src/components/layout/'),
           "@pages": path.resolve(__dirname, 'src/components/pages/'),
           "@api": path.resolve(__dirname, 'src/request/api.js'),
         },

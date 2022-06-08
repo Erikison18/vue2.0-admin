@@ -3,7 +3,7 @@
     <h4>news~~</h4>
     <ul>
       <li v-for="item in newsList" :key="item.id">
-        <router-link :to="`/home/news/detail?id=${item.id}&title=${item.title}`">{{item.title}}</router-link>
+        <router-link :to="`/userLayout/home/news/detail?id=${item.id}&title=${item.title}`">{{item.title}}</router-link>
       </li>
     </ul>
     <router-view></router-view>

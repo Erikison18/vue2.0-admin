@@ -1,13 +1,13 @@
 <template>
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" background-color="#545c64"
   text-color="#fff" active-text-color="#ffd04b" @select="handleSelect">
-    <el-menu-item index="/demo">Demo</el-menu-item>
-    <el-submenu index="/home">
+    <el-menu-item index="/userLayout/demo">Demo</el-menu-item>
+    <el-submenu index="/userLayout/home">
       <template slot="title">Home</template>
-      <el-menu-item index="/home/news">News</el-menu-item>
-      <el-menu-item index="/home/message">Message</el-menu-item>
+      <el-menu-item index="/userLayout/home/news">News</el-menu-item>
+      <el-menu-item index="/userLayout/home/message">Message</el-menu-item>
     </el-submenu>
-    <el-menu-item index="/about">About</el-menu-item>
+    <el-menu-item index="/userLayout/about">About</el-menu-item>
   </el-menu>
 </template>
 
