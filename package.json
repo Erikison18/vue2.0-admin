@@ -24,29 +24,19 @@
     "@vue/cli-service": "~5.0.0",
     "babel-plugin-component": "^1.1.1",
     "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "less": "^4.1.2",
     "less-loader": "^11.0.0",
+    "prettier": "^2.6.2",
     "terser-webpack-plugin": "^5.3.3",
     "vue-template-compiler": "^2.6.14"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
   "browserslist": [
-    "> 1%",
+    "> 0.1%",
     "last 2 versions",
-    "not dead"
+    "since 2015",
+    "ie > 6"
   ]
 }

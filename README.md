@@ -20,3 +20,6 @@ vuex(https://v3.vuex.vuejs.org/zh/).
 
 vuex-persistedstate(https://www.npmjs.com/package/vuex-persistedstate).
 
+eslint+prettier(https://prettier.io/docs/en/options.html)(https://blog.csdn.net/dreamingbaobei3/article/details/124643312)(https://juejin.cn/post/6844903621805473800)
+
+browserslist(https://www.likecs.com/show-203537431.html)

@@ -6,13 +6,11 @@
 
 <script>
 export default {
-  name: 'NotFound',
-  data: ()=> {
-    return {
-    }
+  name: "NotFound",
+  data: () => {
+    return {}
   },
 }
 </script>
 
-<style scoped lang="less">
-</style>
+<style scoped lang="less"></style>

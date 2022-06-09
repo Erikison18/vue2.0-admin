@@ -6,15 +6,15 @@
 
 <script>
 export default {
-  name: 'MessageComponent',
-  data: ()=> {
+  name: "MessageComponent",
+  data: () => {
     return {}
   },
-  methods: {
-  }
+  methods: {},
 }
 </script>
 
 <style scoped>
-.message {}
+.message {
+}
 </style>

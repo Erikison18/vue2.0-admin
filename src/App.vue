@@ -6,10 +6,9 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   data() {
-    return {
-    }
+    return {}
   },
 }
 </script>
@@ -17,11 +16,11 @@ export default {
 <style>
 html,
 body {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 #app {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 </style>

@@ -4,18 +4,18 @@ export default {
   namespaced: true,
   actions: {
     async loginCommit(context, params) {
-      console.log('submit!', params)
+      console.log("submit!", params)
       await getRequest(`/bilibili/?uid=${params.name}`).then(
-        (response)=> {
+        (response) => {
           // console.log(response)
           context.commit("LOGIN_FLAG", true)
           context.commit("USER_INFO", response.data)
         },
-        (error)=> {
+        (error) => {
           console.error(error.message)
         }
       )
-    }
+    },
   },
   mutations: {
     LOGIN_FLAG(state, value) {
@@ -27,7 +27,7 @@ export default {
   },
   state: {
     loginFlag: false,
-    userInfo: {}
+    userInfo: {},
   },
   getters: {},
-};
+}

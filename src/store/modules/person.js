@@ -9,17 +9,17 @@ export default {
           context.commit("ADD_PERSON", {
             id: new Date().valueOf(),
             name: response,
-          });
+          })
         },
         (error) => {
-          console.error(error.message);
+          console.error(error.message)
         }
-      );
+      )
     },
   },
   mutations: {
     ADD_PERSON(state, value) {
-      state.personList.unshift(value);
+      state.personList.unshift(value)
     },
   },
   state: {
@@ -31,7 +31,7 @@ export default {
   },
   getters: {
     firstPersonName(state) {
-      return state.personList[0].name;
+      return state.personList[0].name
     },
   },
-};
+}

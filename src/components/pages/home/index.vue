@@ -7,15 +7,15 @@
 
 <script>
 export default {
-  name: 'HomeComponent',
+  name: "HomeComponent",
   data() {
     return {}
   },
-  methods: {
-  }
+  methods: {},
 }
 </script>
 
 <style scoped>
-.home {}
+.home {
+}
 </style>

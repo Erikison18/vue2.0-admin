@@ -8,16 +8,14 @@
 <script>
 import MenuComponent from "@common/menu.vue"
 export default {
-  name: 'UserLayout',
+  name: "UserLayout",
   components: {
-    MenuComponent
+    MenuComponent,
   },
   data() {
-    return {
-    }
+    return {}
   },
 }
 </script>
 
-<style>
-</style>
+<style></style>
