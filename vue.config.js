@@ -43,7 +43,8 @@ module.exports = defineConfig({
     Object.assign(config, {
       resolve: {
         alias: {
-          "@js": path.resolve(__dirname, "src/assets/js/"),
+          "@utils": path.resolve(__dirname, "src/utils/"),
+          "@image": path.resolve(__dirname, "src/assets/image/"),
           "@style": path.resolve(__dirname, "src/assets/style/"),
           "@common": path.resolve(__dirname, "src/components/common/"),
           "@layout": path.resolve(__dirname, "src/components/layout/"),
