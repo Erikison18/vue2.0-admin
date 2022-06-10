@@ -2,8 +2,10 @@
   <div class="list">
     <h1>list组件--人员列表</h1>
     <input type="text" placeholder="请输入名字" v-model="name" />
-    <button @click="addPerson">添加</button>
-    <button @click="addPersonServer">随机添加</button>
+    <el-button type="primary" @click="addPerson">添加</el-button>
+    <el-button type="primary" @click="addPersonServer" :loading="loading"
+      >随机添加</el-button
+    >
     <ul>
       <li v-for="item in personList" :key="item.id">
         {{ item.id }}---{{ item.name }}
@@ -22,6 +24,7 @@ export default {
   data: () => {
     return {
       name: "",
+      loading: false,
     }
   },
   computed: {
@@ -44,8 +47,10 @@ export default {
         })
       }
     },
-    addPersonServer() {
-      this.$store.dispatch("person/addPersonServer")
+    async addPersonServer() {
+      this.loading = true
+      await this.$store.dispatch("person/addPersonServer")
+      this.loading = false
     },
   },
 }

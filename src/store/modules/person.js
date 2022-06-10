@@ -3,8 +3,8 @@ import { getRequest } from "@api"
 export default {
   namespaced: true,
   actions: {
-    addPersonServer(context) {
-      getRequest(`/yiyan/?format=text`).then(
+    async addPersonServer(context) {
+      await getRequest(`/yiyan/?format=text`).then(
         (response) => {
           context.commit("ADD_PERSON", {
             id: new Date().valueOf(),

@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapMutations, mapActions } from "vuex"
 import ListComponent from "./list.vue"
+import { mapState, mapGetters, mapMutations, mapActions } from "vuex"
 export default {
   name: "AboutComponent",
   components: { ListComponent },

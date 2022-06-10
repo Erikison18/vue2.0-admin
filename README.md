@@ -31,7 +31,37 @@ npm run build
 ├── README.md // 项目说明书 \
 └── vue.config.js // @vue-cli 配置文件 \
 
-## 自定义配置
+## vue组件中选项的顺序
+```
+// 例子
+import MenuComponent from "@common/menu.vue" //自研的子组件或第三方组件
+import NotFound from "@pages/notFound/index.vue" //自研的子组件或第三方组件
+import { mapState, mapGetters, mapMutations, mapActions } from "vuex" //vuex
+import { getRequest } from "@api" //api请求类,其他服务类
+import { formatThousand } from "@/utils/utils"; //工具类等
+import eventBus from "@/utils/eventBus"; //vue eventBus
+import reportMixins from "@/mixins/reportMixins"; //复用的属性或方法
+export default {
+  mixins: [],
+  components: {
+  },
+  props: {
+    menuList: {
+      type: Array,
+      default() {
+        return [];
+      }
+    }
+  },
+  data(){},
+  computed:{},
+  watch:{},
+  mounted(){},
+  methods:{},
+}
+```
+
+## 自定义配置和文档地址
 @vue2.0(https://cn.vuejs.org/v2/api/).
 
 @vue-cli5.04搭建vue2.6.14版本(https://cli.vuejs.org/config/).
@@ -47,6 +77,8 @@ vuex(https://v3.vuex.vuejs.org/zh/).
 vuex-persistedstate(https://www.npmjs.com/package/vuex-persistedstate).
 
 eslint+prettier(https://prettier.io/docs/en/options.html)(https://blog.csdn.net/dreamingbaobei3/article/details/124643312)(https://juejin.cn/post/6844903621805473800)
+
+nprogress顶部进度条(https://www.npmjs.com/package/nprogress)
 
 browserslist(https://www.likecs.com/show-203537431.html)
 
