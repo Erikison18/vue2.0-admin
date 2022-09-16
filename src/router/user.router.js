@@ -36,6 +36,14 @@ export default [
         path: "about",
         component: () => import("@pages/about/index.vue"),
       },
+      {
+        path: "codeManage",
+        component: () => import("@pages/codeManage/index.vue"),
+      },
+      {
+        path: "customerManage",
+        component: () => import("@pages/customerManage/index.vue"),
+      },
     ],
   },
 ]

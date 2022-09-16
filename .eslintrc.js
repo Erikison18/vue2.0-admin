@@ -6,7 +6,7 @@ module.exports = {
   extends: [
     "plugin:vue/essential",
     "eslint:recommended",
-    "plugin:prettier/recommended",
+    // "plugin:prettier/recommended",
   ],
   parserOptions: {
     parser: "@babel/eslint-parser",
@@ -14,6 +14,6 @@ module.exports = {
   },
   rules: {
     // 0 = off, 1 = warn, 2 = error
-    "prettier/prettier": "error",
+    // "prettier/prettier": "error",
   },
 }

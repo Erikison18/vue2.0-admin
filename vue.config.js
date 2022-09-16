@@ -5,7 +5,7 @@ const path = require("path")
 module.exports = defineConfig({
   transpileDependencies: true,
   productionSourceMap: false,
-  publicPath: "/dist",
+  publicPath: "/",
   devServer: {
     compress: true,
     open: true,

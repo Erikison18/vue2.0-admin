@@ -21,6 +21,6 @@ body {
 }
 #app {
   height: 100%;
-  overflow: hidden;
+  overflow: auto;
 }
 </style>

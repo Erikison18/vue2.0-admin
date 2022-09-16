@@ -16,6 +16,8 @@
         <el-menu-item index="/userLayout/home/message">Message</el-menu-item>
       </el-submenu>
       <el-menu-item index="/userLayout/about">About</el-menu-item>
+      <el-menu-item index="/userLayout/codeManage">codeManage</el-menu-item>
+      <el-menu-item index="/userLayout/customerManage">customerManage</el-menu-item>
     </el-menu>
     <span class="username">{{ userInfo.name }}</span>
   </div>
